@@ -283,15 +283,118 @@ hr {
 	margin-right: 15px;
 }
 #rooms .rate {
-	color: #316e66;
-	display: inline-block;
-	font: 16px/35px "Times New Roman", Times, serif;
-	height: 35px;
-	width: 138px;
-	border: 1px solid #5a4535;
+	background: linear-gradient(#3aa596, #267c71);
+	border: 1px solid #1d625a;
+	border-radius: 4px;
+	box-shadow: 0 2px 0 #174d47;
+	box-sizing: border-box;
+	color: #fff;
+	display: inline-flex;
+	flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 50px;
+	justify-content: center;
+	padding: 0 18px;
+	text-decoration: none;
 	text-align: center;
 	position: absolute;
+	right: 0;
 	bottom: 30px;
+	width: 174px;
+}
+#rooms .rate span {
+	color: #eefbf9;
+	font-size: 12px;
+	line-height: 16px;
+}
+#rooms .rate strong {
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+#rooms .rate:hover,
+#rooms .rate:focus {
+	background: linear-gradient(#f09a48, #d9782f);
+	border-color: #ad581f;
+	box-shadow: 0 2px 0 #874219;
+	outline: none;
+}
+#rooms .rate:focus-visible {
+	outline: 3px solid #f5c684;
+	outline-offset: 3px;
+}
+/** Booking **/
+#booking-intro {
+	margin-bottom: 24px;
+}
+#booking-form {
+	background: #f5f0e6;
+	border: 1px solid #b7a98e;
+	border-radius: 5px;
+	padding: 24px;
+}
+#booking-form fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+#booking-form legend {
+	color: #2c9688;
+	font: 24px/30px "Times New Roman", Times, serif;
+	margin-bottom: 18px;
+}
+#booking-form .form-grid {
+	display: grid;
+	gap: 18px 22px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#booking-form label {
+	color: #5a4535;
+	display: block;
+	font: bold 13px/18px Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+#booking-form input,
+#booking-form select,
+#booking-form textarea {
+	background: #fff;
+	border: 1px solid #8f806e;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: #4d3a2d;
+	display: block;
+	font: 15px/20px Arial, Helvetica, sans-serif;
+	margin-top: 6px;
+	padding: 9px 10px;
+	width: 100%;
+}
+#booking-form textarea {
+	min-height: 105px;
+	resize: vertical;
+}
+#booking-form .full-width {
+	grid-column: 1 / -1;
+}
+#booking-form .booking-submit {
+	background: linear-gradient(#3aa596, #267c71);
+	border: 1px solid #1d625a;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	font: bold 15px/20px Arial, Helvetica, sans-serif;
+	margin-top: 20px;
+	padding: 12px 22px;
+	text-transform: uppercase;
+	width: auto;
+}
+#booking-form .booking-submit:hover,
+#booking-form .booking-submit:focus {
+	background: linear-gradient(#f09a48, #d9782f);
+}
+#booking-note {
+	color: #5a4535;
+	font-size: 13px;
+	margin: 14px 0 0;
 }
 /** Food **/
 #foods li > div.infos {
