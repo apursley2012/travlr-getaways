@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Book Your Stay | Travlr Getaways</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header">
+				<div id="logo">
+					<a href="index.html"><img src="images/logo.png" alt="Travlr Getaways" height="100" width="200"></a>
+				</div>
+				<div id="navigation">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="travel.html">Travel</a></li>
+						<li class="selected"><a href="rooms.html">Rooms</a></li>
+						<li><a href="meals.html">Meals</a></li>
+						<li><a href="news.html">News</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+							<h1>Book Your Stay</h1>
+							<p id="booking-intro">
+								Choose your room, travel dates, and number of guests to begin planning your stay at Travlr Getaways.
+							</p>
+							<form id="booking-form" action="contact.html" method="get">
+								<fieldset>
+									<legend>Reservation Details</legend>
+									<div class="form-grid">
+										<label>
+											Room
+											<select id="room" name="room" required>
+												<option value="">Select a room</option>
+												<option value="first-class">First Class Room — $220 per night</option>
+												<option value="deluxe">Deluxe Room — $150 per night</option>
+												<option value="suite">Suite Room — $180 per night</option>
+											</select>
+										</label>
+										<label>
+											Guests
+											<select name="guests" required>
+												<option value="1">1 guest</option>
+												<option value="2" selected>2 guests</option>
+												<option value="3">3 guests</option>
+												<option value="4">4 guests</option>
+											</select>
+										</label>
+										<label>
+											Check-in
+											<input type="date" name="check-in" required>
+										</label>
+										<label>
+											Check-out
+											<input type="date" name="check-out" required>
+										</label>
+										<label>
+											First Name
+											<input type="text" name="first-name" autocomplete="given-name" required>
+										</label>
+										<label>
+											Last Name
+											<input type="text" name="last-name" autocomplete="family-name" required>
+										</label>
+										<label>
+											Email
+											<input type="email" name="email" autocomplete="email" required>
+										</label>
+										<label>
+											Phone
+											<input type="tel" name="phone" autocomplete="tel">
+										</label>
+										<label class="full-width">
+											Special Requests
+											<textarea name="requests" placeholder="Tell us about accessibility, dining, or other travel needs."></textarea>
+										</label>
+									</div>
+									<button class="booking-submit" type="submit">Continue Booking</button>
+									<p id="booking-note">You will have an opportunity to review your request before confirming your stay.</p>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul class="navigation">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="travel.html">Travel</a></li>
+					<li class="active"><a href="rooms.html">Rooms</a></li>
+					<li><a href="meals.html">Meals</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<p>© 2026 Alysha Pursley. All rights reserved.</p>
+		</div>
+	</div>
+	<script>
+		(function () {
+			var selectedRoom = new URLSearchParams(window.location.search).get('room');
+			var roomSelect = document.getElementById('room');
+			if (selectedRoom && roomSelect.querySelector('option[value="' + selectedRoom + '"]')) {
+				roomSelect.value = selectedRoom;
+			}
+
+			var today = new Date();
+			today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+			var minimumDate = today.toISOString().split('T')[0];
+			var checkIn = document.querySelector('input[name="check-in"]');
+			var checkOut = document.querySelector('input[name="check-out"]');
+			checkIn.min = minimumDate;
+			checkOut.min = minimumDate;
+
+			checkIn.addEventListener('change', function () {
+				checkOut.min = checkIn.value || minimumDate;
+				if (checkOut.value && checkOut.value <= checkIn.value) {
+					checkOut.value = '';
+				}
+			});
+		}());
+	</script>
+</body>
+</html>
