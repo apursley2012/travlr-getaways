@@ -7,7 +7,7 @@ Date: August 2026
 
 <div align="center">
 
-<img src="./images/logo.png" alt="Travlr Getaways logo" width="65%">
+<img src="./images/logo.png" alt="Travlr Getaways logo" width="75%">
 
 <h1>Travlr Getaways ✈️</h1>
 
