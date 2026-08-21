@@ -59,34 +59,37 @@ Date: August 2026
 <a id="project-overview"></a>
 
 <details open>
-<summary><strong>Project Overview 🔎</strong></summary>
+<summary><h2><strong>Project Overview 🔎</strong></h2></summary>
 
 
-## Project Overview 🔎
 
-**Travlr Getaways** is a travel application project with customer trip browsing, administrative trip management, API-backed data, MongoDB persistence, authentication, and a public GitHub Pages presentation of the full-stack workflow.
+
+
+**Travlr Getaways** is a travel application that combines a customer-facing trip catalog with an authenticated administrative workflow. Travelers can browse trip information through the public experience, while authorized staff can manage the same underlying trip data through protected application features.
+
+I built the project around the fact that a travel site serves two very different audiences. Customers need clear, attractive trip information with as little friction as possible, while staff need dependable ways to create, edit, and maintain the content behind those listings. Keeping those responsibilities separate produces a cleaner experience for both groups without duplicating the data model.
+
+The application uses a shared API and data layer to connect those experiences. That architecture lets the public site focus on discovery while the administrative side focuses on maintenance, authentication, and content accuracy.
 
 </details>
 
 <a id="purpose"></a>
 
 <details open>
-<summary><strong>Purpose 🎯</strong></summary>
+<summary><h3><strong>Purpose 🎯</strong></h3></summary>
 
 
-### Purpose 🎯
 
-Travlr Getaways is built around two different users who need two different experiences. Travelers need a simple way to browse trip information, while administrators need authenticated tools for creating, editing, and maintaining that same trip data. The project documents both sides of the application and the API/database layer connecting them instead of treating the customer site and admin workflow as unrelated pieces.
 
+I created **Travlr Getaways** to support the two workflows a travel site needs most: customers need a clear way to discover and review trip options, while staff need secure tools for maintaining the trip information those customers see. The application separates the public travel experience from the authenticated administrative workflow while connecting both through the same API and data layer. Its purpose is to give travelers a simple browsing experience without making trip management difficult for the people responsible for keeping the catalog accurate.
 </details>
 
 <a id="design-style-and-inspiration"></a>
 
 <details open>
-<summary><strong>Design Style and Inspiration 🎨</strong></summary>
+<summary><h3><strong>Design Style and Inspiration 🎨</strong></h3></summary>
 
 
-### Design Style and Inspiration 🎨
 
 Travlr Getaways balances an inviting travel-facing experience with the more operational structure needed for trip data and administration. Teal and blue establish the travel brand, orange highlights important actions, and sand, cream, and paper tones keep destination content warm and readable. Customer-facing pages can feel visual and exploratory, while forms, records, and administrative areas use the same palette with a tighter information hierarchy.
 
@@ -95,25 +98,28 @@ Travlr Getaways balances an inviting travel-facing experience with the more oper
 <a id="main-color-palette"></a>
 
 <details open>
-<summary><strong>Main Color Palette 🌈</strong></summary>
+<summary><h3><strong>Main Color Palette 🌈</strong></h3></summary>
 
 
-### Main Color Palette 🌈
+
+
 
 I pulled the palette below directly from the current project stylesheet `css/style.css`.
 
-| Hex | Color Name | Primary Use |
+Each row lists every interface-use category identified for that exact color value in the documented stylesheet analysis. When one hex value is reused for several jobs, I keep all of those uses together in the same row instead of reducing it to a single generic label.
+
+| Hex | Color Name | Complete Use in the Interface |
 | --- | --- | --- |
 | `#039AAA` | Travlr Teal | Primary brand color and major interactive elements |
-| `#047A86` | Dark Teal | Hover states, deeper accents, and supporting brand structure |
+| `#047A86` | Dark Teal | Hover states; deeper accents; and supporting brand structure |
 | `#0A6872` | Deep Teal | Darkest teal details and contrast |
-| `#1261A0` | Travel Blue | Secondary brand color, links, and supporting actions |
+| `#1261A0` | Travel Blue | Secondary brand color; links; and supporting actions |
 | `#0D4B7D` | Dark Blue | Darker blue states and text emphasis |
 | `#FF8B3D` | Travel Orange | Primary call-to-action and warm accent |
 | `#D96E27` | Dark Orange | Hover states and deeper orange emphasis |
 | `#F5EFE6` | Sand | Warm background and travel-oriented neutral surface |
 | `#FFF7ED` | Cream | Soft panels and supporting light areas |
-| `#FFFDFA` | Paper | Cards, forms, and primary light content surfaces |
+| `#FFFDFA` | Paper | Cards; forms; and primary light content surfaces |
 | `#15222D` | Ink | Primary text |
 | `#5C6B76` | Muted Slate | Secondary text |
 | `#D8D8D1` | Line | Borders and separators |
@@ -124,10 +130,9 @@ I pulled the palette below directly from the current project stylesheet `css/sty
 <a id="preview-screenshots"></a>
 
 <details open>
-<summary><strong>Preview Screenshots 🖼️</strong></summary>
+<summary><h3><strong>Preview Screenshots 🖼️</strong></h3></summary>
 
 
-### Preview Screenshots 🖼️
 
 Click any preview image in the repository screenshot folder to open the full-size file.
 
@@ -144,10 +149,9 @@ The gallery uses paired, centered images when screenshots are present. Keep scre
 <a id="key-features"></a>
 
 <details open>
-<summary><strong>Key Features ✨</strong></summary>
+<summary><h2><strong>Key Features ✨</strong></h2></summary>
 
 
-## Key Features ✨
 
 *   **Browse available travel packages and trip details**
 *   **Separate customer-facing and administrator experiences**
@@ -165,10 +169,9 @@ The gallery uses paired, centered images when screenshots are present. Keep scre
 <a id="tech-stack"></a>
 
 <details open>
-<summary><strong>Tech Stack 🛠️</strong></summary>
+<summary><h2><strong>Tech Stack 🛠️</strong></h2></summary>
 
 
-## Tech Stack 🛠️
 
 *   **Node.js**
 *   **Express**
@@ -187,10 +190,9 @@ The gallery uses paired, centered images when screenshots are present. Keep scre
 <a id="live-demo"></a>
 
 <details open>
-<summary><strong>Live Demo 🚀</strong></summary>
+<summary><h2><strong>Live Demo 🚀</strong></h2></summary>
 
 
-## Live Demo 🚀
 
 Open the published project here:
 
@@ -203,20 +205,18 @@ Open the published project here:
 <a id="installation"></a>
 
 <details open>
-<summary><strong>Installation 📦</strong></summary>
+<summary><h2><strong>Installation 📦</strong></h2></summary>
 
 
-## Installation 📦
 
 </details>
 
 <a id="local-use"></a>
 
 <details open>
-<summary><strong>Local Use 💻</strong></summary>
+<summary><h3><strong>Local Use 💻</strong></h3></summary>
 
 
-### Local Use 💻
 
 1. Clone or download the repository.
 2. Keep the existing folder structure intact so the page can still find its styles, scripts, data, and assets.
@@ -228,10 +228,9 @@ Open the published project here:
 <a id="github-pages-deployment"></a>
 
 <details open>
-<summary><strong>GitHub Pages Deployment 🌐</strong></summary>
+<summary><h3><strong>GitHub Pages Deployment 🌐</strong></h3></summary>
 
 
-### GitHub Pages Deployment 🌐
 
 For the static/public portion, keep `index.html` at the repository root, use relative asset paths, then enable **Settings → Pages → Deploy from a branch → main → / (root)**. Projects that include Python, Node, MongoDB, authentication, browser automation, or another server runtime still need an appropriate backend host for those server-dependent features.
 
@@ -242,10 +241,9 @@ For the static/public portion, keep `index.html` at the repository root, use rel
 <a id="usage"></a>
 
 <details open>
-<summary><strong>Usage 🧭</strong></summary>
+<summary><h2><strong>Usage 🧭</strong></h2></summary>
 
 
-## Usage 🧭
 
 Start with the main page and follow the project’s primary workflow. The interface is intended to be usable without reading the source first, while the case studies, articles, documentation, and source folders provide the deeper implementation context. Where browser storage is used, saved information belongs to that browser/device unless the project explicitly includes a shared backend.
 
@@ -256,20 +254,18 @@ Start with the main page and follow the project’s primary workflow. The interf
 <a id="project-structure"></a>
 
 <details open>
-<summary><strong>Project Structure 🗂️</strong></summary>
+<summary><h2><strong>Project Structure 🗂️</strong></h2></summary>
 
 
-## Project Structure 🗂️
 
 </details>
 
 <a id="pages-included"></a>
 
 <details open>
-<summary><strong>Pages Included 📄</strong></summary>
+<summary><h3><strong>Pages Included 📄</strong></h3></summary>
 
 
-### Pages Included 📄
 
 | Page / Area | Purpose |
 | --- | --- |
@@ -284,10 +280,9 @@ Start with the main page and follow the project’s primary workflow. The interf
 <a id="core-files-and-architecture"></a>
 
 <details open>
-<summary><strong>Core Files and Architecture 🧩</strong></summary>
+<summary><h3><strong>Core Files and Architecture 🧩</strong></h3></summary>
 
 
-### Core Files and Architecture 🧩
 
 The repository separates the public interface from supporting source and documentation where the project needs that distinction. The important rule is that **Travlr Getaways should be documented as the project it is**, not as a generic theme or one-size-fits-all site. Files that implement the main workflow belong with the application, while case studies, articles, source history, data, or backend code are documented according to their real role.
 
@@ -296,10 +291,9 @@ The repository separates the public interface from supporting source and documen
 <a id="file-and-folder-structure"></a>
 
 <details open>
-<summary><strong>File and Folder Structure 🌳</strong></summary>
+<summary><h3><strong>File and Folder Structure 🌳</strong></h3></summary>
 
 
-### File and Folder Structure 🌳
 
 ```text
 travlr-getaways/
@@ -320,10 +314,9 @@ This tree highlights the major documented areas rather than inventing files that
 <a id="customer-admin-and-api-architecture"></a>
 
 <details open>
-<summary><strong>Customer, Admin, and API Architecture 🏗️</strong></summary>
+<summary><h2><strong>Customer, Admin, and API Architecture 🏗️</strong></h2></summary>
 
 
-## Customer, Admin, and API Architecture 🏗️
 
 The full-stack architecture keeps presentation and data responsibilities separate. Public pages consume trip information for browsing, while the administrative workflow performs protected management operations. MongoDB and Mongoose provide persistence, and the API layer gives both sides a consistent way to work with trip data.
 
@@ -336,10 +329,9 @@ The GitHub Pages version is documentation and presentation for the project, not 
 <a id="customization-guide"></a>
 
 <details open>
-<summary><strong>Customization Guide 🎨</strong></summary>
+<summary><h2><strong>Customization Guide 🎨</strong></h2></summary>
 
 
-## Customization Guide 🎨
 
 The safest way to customize or extend **Travlr Getaways** is to preserve its existing workflow first, then change one layer at a time. Update project content and data in the files that already own that information, keep visual changes inside the existing style system, and test every page that shares the changed component or data source. New features should solve a problem that belongs to this project instead of copying a feature from an unrelated application.
 
@@ -352,10 +344,9 @@ For visual changes, update the documented palette intentionally and re-check con
 <a id="accessibility-and-browser-compatibility"></a>
 
 <details open>
-<summary><strong>Accessibility and Browser Compatibility ♿</strong></summary>
+<summary><h2><strong>Accessibility and Browser Compatibility ♿</strong></h2></summary>
 
 
-## Accessibility and Browser Compatibility ♿
 
 The public interface should remain keyboard-navigable, readable at common mobile and desktop widths, and usable without relying on color alone to communicate state. Form controls should keep visible labels or accessible names, images should use meaningful `alt` text, focus indicators should remain visible, and decorative animation should respect reduced-motion preferences when motion is present. Browser compatibility should be checked in current Safari, Chrome, Firefox, and Edge where practical.
 
@@ -366,10 +357,9 @@ The public interface should remain keyboard-navigable, readable at common mobile
 <a id="repository-relationship"></a>
 
 <details open>
-<summary><strong>Repository Relationship 🔗</strong></summary>
+<summary><h2><strong>Repository Relationship 🔗</strong></h2></summary>
 
 
-## Repository Relationship 🔗
 
 **Travlr Getaways** is documented as its own project. Supporting case studies, articles, source history, static presentation layers, or backend/runtime folders are parts of this repository only when they help explain or run this project. They should not be described as separate replacement projects.
 
@@ -382,10 +372,9 @@ Where this repository contains both a static GitHub Pages layer and source that 
 <a id="project-scope-and-limitations"></a>
 
 <details open>
-<summary><strong>Project Scope and Limitations 📌</strong></summary>
+<summary><h2><strong>Project Scope and Limitations 📌</strong></h2></summary>
 
 
-## Project Scope and Limitations 📌
 
 This README separates what the published browser version can do from functionality that belongs to a backend, database, native application, notebook, or other runtime. Static hosting limitations are stated where they materially affect the project. The documentation should not imply that GitHub Pages is providing server-side authentication, Python execution, MongoDB access, SMS delivery, or another service it cannot actually run.
 
@@ -396,10 +385,9 @@ This README separates what the published browser version can do from functionali
 <a id="possible-future-enhancements"></a>
 
 <details open>
-<summary><strong>Possible Future Enhancements 💡</strong></summary>
+<summary><h2><strong>Possible Future Enhancements 💡</strong></h2></summary>
 
 
-## Possible Future Enhancements 💡
 
 *   Publish a free hosted backend again if a stable long-running option is available
 *   Add stronger admin validation and audit-friendly change feedback
@@ -413,10 +401,9 @@ This README separates what the published browser version can do from functionali
 <a id="contributing"></a>
 
 <details open>
-<summary><strong>Contributing 🤝</strong></summary>
+<summary><h2><strong>Contributing 🤝</strong></h2></summary>
 
 
-## Contributing 🤝
 
 Contributions, bug reports, and practical improvement suggestions are welcome when they preserve the existing project direction and do not replace its identity with a generic redesign.
 
@@ -425,10 +412,9 @@ Contributions, bug reports, and practical improvement suggestions are welcome wh
 <a id="reporting-issues"></a>
 
 <details open>
-<summary><strong>Reporting Issues 🐛</strong></summary>
+<summary><h3><strong>Reporting Issues 🐛</strong></h3></summary>
 
 
-### Reporting Issues 🐛
 
 When reporting a problem, include the page or workflow involved, what you expected, what actually happened, browser/device information when relevant, and a screenshot if the issue is visual.
 
@@ -437,10 +423,9 @@ When reporting a problem, include the page or workflow involved, what you expect
 <a id="requesting-additions"></a>
 
 <details open>
-<summary><strong>Requesting Additions 📝</strong></summary>
+<summary><h3><strong>Requesting Additions 📝</strong></h3></summary>
 
 
-### Requesting Additions 📝
 
 Feature requests should explain the user problem the addition would solve and how it fits the existing project. Project-specific improvements are preferred over adding features only because they are common in other applications.
 
@@ -451,10 +436,9 @@ Feature requests should explain the user problem the addition would solve and ho
 <a id="license"></a>
 
 <details open>
-<summary><strong>License 📜</strong></summary>
+<summary><h2><strong>License 📜</strong></h2></summary>
 
 
-## License 📜
 
 No license terms are assumed here. If the repository includes a `LICENSE` file, that file controls reuse. If it does not, normal copyright applies and permission should not be inferred from the repository being public.
 
@@ -465,10 +449,9 @@ No license terms are assumed here. If the repository includes a `LICENSE` file, 
 <a id="important-links"></a>
 
 <details open>
-<summary><strong>Important Links 🔗</strong></summary>
+<summary><h2><strong>Important Links 🔗</strong></h2></summary>
 
 
-## Important Links 🔗
 
 *   **Live Project:** [https://apursley2012.github.io/travlr-getaways/](https://apursley2012.github.io/travlr-getaways/)
 *   **Repository:** [https://github.com/apursley2012/travlr-getaways](https://github.com/apursley2012/travlr-getaways)
@@ -478,19 +461,22 @@ No license terms are assumed here. If the repository includes a `LICENSE` file, 
 
 ---
 
-<a id="copyright"></a>
+<a id="attribution"></a>
 
 <details open>
-<summary><strong>Copyright ©️</strong></summary>
+<summary><h2><strong>Attribution ℹ️</strong></h2></summary>
 
 
-## Copyright ©️
+Project documentation and original project materials are credited to their respective sources where applicable.
 
-© 2026 Alysha Pursley. Project documentation and original project materials are credited to their respective sources where applicable.
-
+</details>
 
 ---
 
-Made with care by Alysha Pursley.
+<div align=center>
+   
+***Made with ❤️ and a bit of 🪄.***
+<br>
+**©️ 2026 Alysha Pursley. All Rights Reserved.**
 
-</details>
+</div>
