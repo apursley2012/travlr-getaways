@@ -52,7 +52,7 @@ Date: August 2026
     *   [Requesting Additions 📝](#requesting-additions)
 *   [License 📜](#license)
 *   [Important Links 🔗](#important-links)
-*   [Copyright ©️](#copyright)
+*   [Attribution ℹ️](#attribution)
 
 ---
 
