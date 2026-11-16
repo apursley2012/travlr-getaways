@@ -1,0 +1,79 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /footer.css                                                           *
+ * Purpose: Styles the reusable site footer, secondary navigation, and policy  *
+ *          links.                                                             *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+.site-footer {
+  color: #594334;
+  font: 0.875rem/1.4 var(--font-serif);
+  padding: 0 var(--content-padding) 1.25rem;
+  text-transform: uppercase;
+}
+
+.site-footer__inner {
+  background: var(--color-footer);
+  border-bottom: 1px solid var(--color-footer-border);
+  border-top: 1px solid #cdbeb2;
+  margin-inline: auto;
+  padding: 0.75rem 1.25rem;
+}
+
+.site-footer__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer__navigation a {
+  align-items: center;
+  color: #594334;
+  display: inline-flex;
+  min-height: 2.75rem;
+  padding: 0.25rem;
+  text-decoration: none;
+}
+
+.site-footer__navigation a:hover {
+  color: #eee7c3;
+}
+
+.site-footer__navigation a[aria-current="page"] {
+  color: #fff;
+}
+
+.site-footer__policies {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-top: var(--space-sm);
+}
+
+.site-footer__copyright {
+  margin: 0;
+  padding-top: 0.75rem;
+  text-align: center;
+  text-transform: none;
+}
+
+@media (max-width: 52rem) {
+  .site-footer {
+    --content-padding: 1.25rem;
+  }
+}
+
+@media (max-width: 38rem) {
+  .site-footer {
+    --content-padding: 0.75rem;
+  }
+}

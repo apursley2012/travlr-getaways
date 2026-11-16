@@ -1,0 +1,37 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /travel.css                                                           *
+ * Purpose: Owns presentation rules unique to the static travel page; reusable *
+ *          rules remain in shared.css.                                        *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* Travel destinations */
+.travel-card {
+  display: flow-root;
+  padding: 1.875rem 0 0;
+}
+
+.travel-card > a:first-child {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: min(45%, 24rem);
+}
+
+.travel-card img {
+  border: 1px solid var(--color-primary);
+}
+
+/* Stack destination media above copy on narrow screens. */
+@media (max-width: 38rem) {
+  .travel-card > a:first-child {
+    float: none;
+    margin: 0 0 1rem;
+    max-width: none;
+  }
+}

@@ -1,0 +1,89 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /booking.css                                                          *
+ * Purpose: Owns presentation rules unique to the static booking page;         *
+ *          reusable rules remain in shared.css.                               *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* Booking form */
+.booking-intro {
+  margin-bottom: 1.5rem;
+}
+
+.booking-form {
+  --form-control-border: #8f806e;
+  --form-control-color: #4d3a2d;
+  --form-control-radius: 0.2rem;
+  background: var(--color-surface);
+  border: 1px solid #b7a98e;
+  padding: 1.5rem;
+}
+
+.booking-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-form legend {
+  color: var(--color-primary);
+  font: 1.5rem/1.25 var(--font-serif);
+  margin-bottom: 1.125rem;
+}
+
+.booking-form__grid {
+  display: grid;
+  gap: 1.125rem 1.375rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.booking-form .form-field {
+  color: var(--color-text);
+  display: block;
+  font: bold 0.8125rem/1.4 var(--font-sans);
+  text-transform: uppercase;
+}
+
+.booking-form textarea.form-control {
+  min-height: 6.5rem;
+  resize: vertical;
+}
+
+.booking-form__full-width {
+  grid-column: 1 / -1;
+}
+
+.booking-form__submit {
+  font: bold 0.9375rem/1.35 var(--font-sans);
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.375rem;
+  text-transform: uppercase;
+}
+
+
+.booking-note {
+  font-size: 0.8125rem;
+  margin: 0.875rem 0 0;
+  padding-bottom: 0;
+}
+
+/* Booking form responsive adjustments. */
+@media (max-width: 38rem) {
+  .booking-form {
+    padding: 1rem;
+  }
+
+  .booking-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form__full-width {
+    grid-column: auto;
+  }
+}

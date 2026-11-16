@@ -1,0 +1,28 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /header.css                                                           *
+ * Purpose: Styles the reusable site header container independently of         *
+ *          logo/navigation.                                                   *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+.site-header {
+  padding: 1.25rem var(--content-padding) 0;
+}
+
+@media (max-width: 52rem) {
+  .site-header {
+    --content-padding: 1.25rem;
+  }
+}
+
+@media (max-width: 38rem) {
+  .site-header {
+    --content-padding: 0.75rem;
+  }
+}

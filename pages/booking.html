@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--                                                                            
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /booking.html                                                         *
+ * Purpose: Defines the static GitHub Pages demonstration of the booking       *
+ *          customer page.                                                     *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+-->                                                                             
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Plan Your Beach Resort Stay Online | Travlr Getaways</title>
+    <meta
+      name="description"
+      content="Plan a Travlr Getaways stay by choosing a room, travel dates, guest count, and contact details in a private, local-only static booking demonstration here." />
+    <meta
+      name="theme-color"
+      content="#316e66" />
+    <meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+        img-src 'self' data:;
+        style-src 'self';
+        script-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self'" />
+    <meta
+      property="og:title"
+      content="Plan Your Beach Resort Stay Online | Travlr Getaways" />
+    <meta
+      property="og:description"
+      content="Plan a Travlr Getaways stay by choosing a room, travel dates, guest count, and contact details in a private, local-only static booking demonstration here." />
+    <meta
+      property="og:type"
+      content="website" />
+    <meta
+      property="og:image"
+      content="../images/social-preview.png" />
+    <meta
+      name="twitter:card"
+      content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Plan Your Beach Resort Stay Online | Travlr Getaways" />
+    <meta
+      name="twitter:description"
+      content="Plan a Travlr Getaways stay by choosing a room, travel dates, guest count, and contact details in a private, local-only static booking demonstration here." />
+    <meta
+      name="twitter:image"
+      content="../images/social-preview.png" />
+    <link href="../favicon.ico" rel="icon" />
+    <link href="../images/favicon-16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="../images/favicon-32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="../images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <link href="../css/shared.css" rel="stylesheet" />
+    <link href="../css/pages/booking.css" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Plan Your Beach Resort Stay Online | Travlr Getaways",
+        "description": "Plan a Travlr Getaways stay by choosing a room, travel dates, guest count, and contact details in a private, local-only static booking demonstration here."
+      }
+    </script>
+  </head>
+  <body data-current-section="rooms">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <noscript>
+      <nav aria-label="Primary navigation without JavaScript" class="noscript-navigation">
+        <a href="index.html">Home</a>
+        <a href="travel.html">Travel</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="meals.html">Meals</a>
+        <a href="news.html">Travel Guide</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </noscript>
+    <div class="site-background">
+      <div class="site-container">
+        <!-- Page-specific content -->
+        <main class="site-content" id="main-content">
+          <div class="content-panel">
+            <div>
+              <div class="content-panel__body">
+                <h1>Book Your Stay</h1>
+                <p class="booking-intro">
+                  Choose your room, travel dates, and number of guests to begin planning your stay
+                  at Travlr Getaways.
+                </p>
+                <noscript><p>This is a browser-only demonstration. Enable JavaScript to validate this form; no booking or message is submitted.</p></noscript>
+              <form action="" class="booking-form" data-demo-form novalidate>
+                  <fieldset>
+                    <legend>
+                      Reservation Details
+                    </legend>
+                    <div class="booking-form__grid">
+                      <label class="form-field">
+                        Room
+                        <select class="form-control" aria-describedby="room-error" id="room" name="room" required="">
+                          <option value="">Select a room</option>
+                          <option value="first-class">First Class Room — $220 per night</option>
+                          <option value="deluxe">Deluxe Room — $150 per night</option>
+                          <option value="suite">Suite Room — $180 per night</option>
+                        </select>
+                <span class="form-error" id="room-error"></span>
+                      </label>
+                      <label class="form-field">
+                        Guests
+                        <select class="form-control" aria-describedby="guests-error" id="guests" name="guests" required="">
+                          <option value="1">1 guest</option>
+                          <option selected="" value="2">2 guests</option>
+                          <option value="3">3 guests</option>
+                          <option value="4">4 guests</option>
+                        </select>
+                <span class="form-error" id="guests-error"></span>
+                      </label>
+                      <label class="form-field">
+                        Check-in
+                        <input class="form-control" aria-describedby="check-in-error" id="check-in" name="check-in" required="" type="date" />
+                <span class="form-error" id="check-in-error"></span>
+                      </label>
+                      <label class="form-field">
+                        Check-out
+                        <input class="form-control" aria-describedby="check-out-error" id="check-out" name="check-out" required="" type="date" />
+                <span class="form-error" id="check-out-error"></span>
+                      </label>
+                      <label class="form-field">
+                        First Name
+                        <input class="form-control"
+                          autocomplete="given-name"
+                          aria-describedby="first-name-error" id="first-name" maxlength="80" name="first-name"
+                          required=""
+                          type="text" />
+                <span class="form-error" id="first-name-error"></span>
+                      </label>
+                      <label class="form-field">
+                        Last Name
+                        <input class="form-control"
+                          autocomplete="family-name"
+                          aria-describedby="last-name-error" id="last-name" maxlength="80" name="last-name"
+                          required=""
+                          type="text" />
+                <span class="form-error" id="last-name-error"></span>
+                      </label>
+                      <label class="form-field">
+                        Email
+                        <input
+                          class="form-control"
+                          autocomplete="email"
+                          aria-describedby="booking-email-error"
+                          id="booking-email"
+                          maxlength="120"
+                          name="email"
+                          required=""
+                          type="email" />
+                <span class="form-error" id="booking-email-error"></span>
+                      </label>
+                      <label class="form-field">
+                        Phone
+                        <input
+                          class="form-control"
+                          autocomplete="tel"
+                          aria-describedby="booking-phone-error"
+                          id="booking-phone"
+                          maxlength="30"
+                          pattern="[0-9()+ .-]{7,30}"
+                          name="phone"
+                          type="tel" />
+                <span class="form-error" id="booking-phone-error"></span>
+                      </label>
+                      <label class="booking-form__full-width form-field">
+                        Special Requests
+                        <textarea class="form-control"
+                          aria-describedby="booking-requests-error" id="booking-requests" maxlength="2000" name="requests"
+                          placeholder="Tell us about accessibility, dining, or other travel needs."></textarea>
+                <span class="form-error" id="booking-requests-error"></span>
+                      </label>
+                    </div>
+                    <button class="action-button booking-form__submit" type="submit" disabled>Continue Booking</button>
+                    <p class="booking-note">
+                      You will have an opportunity to review your request before confirming your
+                      stay.
+                    </p>
+                  </fieldset>
+                  <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- Shared site footer -->
+    </div>
+    <script defer="" src="../js/pages/booking.js">
+    </script>
+    <script src="../js/components/site-shell.js" type="module"></script>
+    <script src="../js/components/demo-forms.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /logo.css                                                             *
+ * Purpose: Owns reusable Travlr logo presentation without coupling it to      *
+ *          navigation.                                                        *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+.site-logo {
+  margin-bottom: 1.25rem;
+}
+
+.site-logo a {
+  display: inline-block;
+}
+
+@media (max-width: 38rem) {
+  .site-logo img {
+    margin-inline: auto;
+  }
+}

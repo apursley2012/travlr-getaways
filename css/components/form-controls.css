@@ -1,0 +1,57 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /form-controls.css                                                    *
+ * Purpose: Defines reusable form-field/control behavior while allowing        *
+ *          page-specific visual variants.                                     *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* Form controls */
+.form-field {
+  min-width: 0;
+}
+
+.form-control {
+  border: 1px solid var(--form-control-border, var(--color-border));
+  border-radius: var(--form-control-radius, 0.2rem);
+  color: var(--form-control-color, var(--color-text));
+  display: block;
+  font: 0.9375rem/1.35 var(--font-sans);
+  padding: var(--form-control-padding, 0.6rem 0.625rem);
+  width: 100%;
+}
+
+.form-control:focus-visible {
+  border-color: var(--color-primary);
+  outline: 3px solid #f5c684cc;
+  outline-offset: 1px;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/***************************************************************************************
+ * Validation feedback stays adjacent to its field and does not rely on color alone.    *
+ **************************************************************************************/
+
+.form-error {
+  display: block;
+  min-height: 1.25em;
+  font-weight: 700;
+}
+
+[aria-invalid="true"] {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.form-status {
+  margin-top: var(--space-md);
+  font-weight: 700;
+}

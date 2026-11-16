@@ -1,0 +1,23 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /shared.css                                                           *
+ * Purpose: Loads the reusable static-demo foundations and conceptual          *
+ *          component styles in dependency order.                              *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+@import url("base.css");
+@import url("components/header.css");
+@import url("components/logo.css");
+@import url("components/navigation.css");
+@import url("components/footer.css");
+@import url("components/action-button.css");
+@import url("components/content-panel.css");
+@import url("components/travel-guide.css");
+@import url("components/listing-card.css");
+@import url("components/form-controls.css");

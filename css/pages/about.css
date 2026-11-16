@@ -1,0 +1,36 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /about.css                                                            *
+ * Purpose: Owns presentation rules unique to the static about page; reusable  *
+ *          rules remain in shared.css.                                        *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* About */
+.about-sidebar {
+  border-left: 1px solid var(--color-border);
+  float: right;
+  margin: 0 0 1rem 1.25rem;
+  padding-left: 1.25rem;
+  width: min(14rem, 38%);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin-bottom: 1.875rem;
+}
+
+/* Remove the floated sidebar on narrow screens. */
+@media (max-width: 38rem) {
+  .about-sidebar {
+    float: none;
+    margin: 0 0 1.5rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,75 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /contact.css                                                          *
+ * Purpose: Owns presentation rules unique to the static contact page;         *
+ *          reusable rules remain in shared.css.                               *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* Contact form */
+.contact-form {
+  --form-control-border: var(--color-text);
+  --form-control-padding: 0.45rem 0.55rem;
+  border: 1px solid var(--color-text);
+  display: grid;
+  float: right;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem 1.5rem;
+  padding: 1.2rem;
+  width: min(26.25rem, 55%);
+}
+
+.contact-form__field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-form label {
+  font: 0.875rem/1.4 var(--font-sans);
+  text-transform: uppercase;
+}
+
+.contact-form textarea.form-control {
+  min-height: 8.9rem;
+  resize: vertical;
+}
+
+.contact-form__submit {
+  align-self: start;
+  background: url("../../images/btn-send.png") no-repeat -70px 0;
+  border: 0;
+  cursor: pointer;
+  height: 26px;
+  justify-self: end;
+  padding: 0;
+  width: 60px;
+}
+
+.contact-form__submit:hover,
+.contact-form__submit:focus-visible {
+  background-position: 0 0;
+}
+
+.contact-form__submit:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.contact p span {
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Stack the form with the contact copy on narrow screens. */
+@media (max-width: 38rem) {
+  .contact-form {
+    float: none;
+    margin: 0 0 1.5rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--                                                                            
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /case-study.html                                                      *
+ * Purpose: Presents the public-facing development case study.                 *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+-->                                                                             
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="Alysha Pursley" name="author" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Travlr Getaways | Web Development Case Study</title>
+    <meta
+      name="description"
+      content="Explore the design and engineering decisions behind Travlr Getaways, a responsive coastal travel website with a separate full-stack application." />
+    <meta
+      name="theme-color"
+      content="#316e66" />
+    <meta
+      name="referrer"
+      content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+        img-src 'self' data:;
+        style-src 'self';
+        script-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self'" />
+    <meta
+      property="og:title"
+      content="Travlr Getaways | Web Development Case Study" />
+    <meta
+      property="og:description"
+      content="Explore the design and engineering decisions behind Travlr Getaways, a responsive coastal travel website with a separate full-stack application." />
+    <meta
+      property="og:type"
+      content="website" />
+    <meta
+      property="og:image"
+      content="../images/social-preview.png" />
+    <meta
+      name="twitter:card"
+      content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Travlr Getaways | Web Development Case Study" />
+    <meta
+      name="twitter:description"
+      content="Explore the design and engineering decisions behind Travlr Getaways, a responsive coastal travel website with a separate full-stack application." />
+    <meta
+      name="twitter:image"
+      content="../images/social-preview.png" />
+    <link href="../favicon.ico" rel="icon" />
+    <link href="../images/favicon-16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="../images/favicon-32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="../images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="../manifest.webmanifest" rel="manifest" />
+    <link href="../css/shared.css" rel="stylesheet" />
+    <link href="../css/pages/about.css" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Travlr Getaways | Web Development Case Study",
+        "description": "Explore the design and engineering decisions behind Travlr Getaways, a responsive coastal travel website with a separate full-stack application."
+      }
+    </script>
+  </head>
+  <body data-current-section="about">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="site-background">
+      <div class="site-container">
+        <main class="site-content" id="main-content">
+          <div class="content-panel">
+            <div class="content-panel__body">
+<h1>Travlr Getaways: Building a Full-Stack Travel Experience</h1>
+            <h2>The project at a glance</h2>
+            <p>Travlr Getaways brings together a customer-facing travel website, a database-backed trip catalog, and a separate administration interface. I built the original application with Node.js, Express, Handlebars, MongoDB, Mongoose, and Angular. I later created a static, responsive presentation so visitors could explore the design without installing a server or database.</p>
+            <p>The challenge was not simply to make a collection of attractive pages. It was to give travelers a clear way to explore destinations while providing an organized, authenticated workflow for maintaining the trip records behind those pages. The source demonstrates these capabilities; it does not include a complete original client brief, so this account avoids attributing undocumented requirements or business results to the project.</p>
+            <h2>What I built and how the pieces work together</h2>
+            <p>The Express application serves the public Home, Travel, Rooms, Meals, News, About, and Contact pages. I organized the page routes, controllers, and Handlebars templates under <code>app-server</code>, while <code>app-api</code> contains REST routes, controllers, authentication, and Mongoose models. That separation makes the distinction between rendering information for guests and managing application data explicit.</p>
+            <p>Trip information is stored in MongoDB. The customer-facing Travel controller reads trip records through the shared Mongoose model and passes them directly to its Handlebars view. I chose this direct model access for server-rendered pages instead of making the Express server send HTTP requests to its own API. The REST endpoints serve a different purpose: allowing the Angular administration interface to retrieve, create, and update trip records.</p>
+            <p>The API exposes public trip-list and trip-detail reads, plus authenticated creation and updates. The Angular interface uses a dedicated trip-data service for HTTP communication rather than duplicating request logic in each component. A small JSON seed dataset supports local setup and repeatable sample content.</p>
+            <h2>Administrative workflows, state, and data integrity</h2>
+            <p>I built Angular views for listing trips, signing in, adding a trip, and editing an existing one. Reactive forms track field values and validation; component flags such as <code>submitted</code> and <code>isSubmitting</code> control feedback and prevent repeated submissions while a request is in progress. Success and failure are handled through observable subscriptions, with navigation back to the listing after a successful write.</p>
+            <p>The selected trip code is saved in browser local storage when someone chooses Edit, then read by the edit view to load the record. The update request uses that original code to identify the existing trip, even if the editor changes the code field. Authentication tokens are also kept in local storage by the Angular authentication service, allowing authorized API requests after navigation or refresh. This is a practical demonstration approach, but browser storage increases the importance of preventing script injection and is a trade-off to revisit before production deployment.</p>
+            <p>On the server, Mongoose defines required trip fields, a unique trip code, a date, and a non-negative per-person price. The API accepts only explicitly permitted trip fields when writing records and runs schema validation during updates. This gives the interface immediate validation while keeping the database rules authoritative.</p>
+            <h2>Authentication and security decisions</h2>
+            <p>Passport handles credential verification, and user passwords are stored as salted PBKDF2 hashes rather than plain text. A successful login issues a time-limited JSON Web Token. Protected trip-write routes validate the token and look up the corresponding user before changing records; public trip browsing does not require a login.</p>
+            <p>Because a registered account can write trip records, public registration is disabled unless an operator explicitly enables it. The API also applies an in-memory limit to authentication requests, restricts the allowed administration origin, and sets browser security headers. These controls demonstrate defensive design, not a claim of production-ready role-based authorization: the implementation does not distinguish multiple administrative permission levels, and multi-instance deployments would need a shared rate-limit strategy.</p>
+            <h2>Visual design and the later static presentation</h2>
+            <p>I retained the resort site's recognizable coastal identity—sea-green accents, warm neutrals, destination imagery, and distinct panels for rooms, meals, and travel information—while improving the organization of the later static version. Shared header, navigation, footer, and travel-guide modules reduce repeated markup, and common CSS works alongside page-specific stylesheets so each section can retain its own character.</p>
+            <p>The layout aims to help visitors find essential information quickly: compare accommodations, preview dining, discover destinations, and read practical travel guidance. The static presentation also includes a dedicated case study, longer-form coastal articles, and informational pages. These pages are content and presentation features, not a substitute for the original application's data-backed workflows.</p>
+            <h2>Accessibility and responsive behavior</h2>
+            <p>The static website uses semantic headings and landmarks, descriptive link text, labeled forms, image alternatives where appropriate, skip navigation, and visible keyboard focus styles. Responsive CSS adapts content and navigation for narrower screens, while reduced-motion preferences are considered in the styling.</p>
+            <p>I approached accessibility as part of the interface structure rather than a decorative finishing step. Clear labels, predictable navigation, and readable content benefit keyboard users and visitors on smaller devices alike. These implementation choices are visible in the source, but they do not amount to a formal accessibility conformance certification or a claim that every browser and assistive technology has been tested.</p>
+            <h2>Testing, limitations, and technical trade-offs</h2>
+            <p>Source-level verification has included JavaScript syntax checks, CSS parsing, local-link and asset checks, seed-data validation, authentication regression checks, and tests of the static demonstration forms. These checks help catch broken references and predictable regressions; they cannot replace an Angular production build, live MongoDB integration testing, or a full browser-based accessibility and deployment review.</p>
+            <p>The most important trade-off is maintaining two clearly separated experiences. The original application demonstrates server-side rendering, persistent data, API design, and authenticated administration. The GitHub Pages version is intentionally static: its booking and contact forms validate inputs locally but do not submit reservations, send messages, process payments, or communicate with MongoDB. I chose that separation so a portfolio visitor can inspect the interface without being misled about what is live.</p>
+            <h2>What this work demonstrates</h2>
+            <p>Travlr Getaways demonstrates my ability to organize a multi-part web application, connect a browser interface to a REST API, model and validate persistent data, implement authentication, and translate a visual direction into a coherent customer experience. It also shows attention to maintainability: related responsibilities are grouped, repeated interface elements are shared, and the distinction between demonstration behavior and live functionality is documented.</p>
+            <p>Explore the <a href='index.html'>customer-facing website</a>, read the <a href='articles.html'>coastal travel articles</a>, or review the <a href='accessibility.html'>accessibility information</a>.</p>
+
+</div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="../js/components/site-shell.js"></script>
+  </body>
+</html>

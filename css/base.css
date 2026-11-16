@@ -1,0 +1,133 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /base.css                                                             *
+ * Purpose: Defines design tokens, document defaults, accessibility helpers,   *
+ *          and shared layout foundations.                                     *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* Design tokens */
+:root {
+  --color-primary: #2c9688;
+  --color-primary-dark: #1d625a;
+  --color-heading: #316e66;
+  --color-text: #5a4535;
+  --color-text-muted: #6d6157;
+  --color-border: #b7b7b7;
+  --color-surface: #f5f0e6;
+  --color-surface-light: #fff;
+  --color-accent: #d9782f;
+  --color-accent-light: #f09a48;
+  --color-footer: #ac9e94;
+  --color-footer-border: #72675f;
+  --color-focus: #f5c684;
+  --font-serif: "Times New Roman", Times, serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --content-width: 60rem;
+  --content-padding: clamp(1rem, 5vw, 3rem);
+  --radius: 0.3rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+}
+
+/* Base document styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffb744 url("../images/bg-body.webp") repeat left bottom;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  margin: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #fff;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.skip-link {
+  background: var(--color-surface-light);
+  color: var(--color-heading);
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  position: fixed;
+  top: 1rem;
+  transform: translateY(-200%);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.site-background {
+  background: url("../images/bg-pattern.webp") repeat-x center top;
+  min-height: 100vh;
+}
+
+.site-container {
+  margin-inline: auto;
+  max-width: var(--content-width);
+  width: 100%;
+}
+
+/***************************************************************************************
+ * Respect visitors who request reduced motion without changing the default design.     *
+ **************************************************************************************/
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

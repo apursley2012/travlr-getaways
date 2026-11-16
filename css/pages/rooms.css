@@ -1,0 +1,99 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /rooms.css                                                            *
+ * Purpose: Owns presentation rules unique to the static rooms page; reusable  *
+ *          rules remain in shared.css.                                        *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* Rooms */
+.room-card {
+  display: grid;
+  gap: 0.75rem 1rem;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 2fr) auto;
+  padding: 1.875rem 0;
+}
+
+.room-card > a:first-child {
+  grid-row: 1 / span 3;
+}
+
+.room-card img {
+  border: 1px solid var(--color-primary);
+}
+
+.room-card h2,
+.room-card p {
+  grid-column: 2;
+}
+
+.room-card__booking-link {
+  align-self: end;
+  box-shadow: 0 2px 0 #174d47;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  justify-content: center;
+  min-width: 10.875rem;
+  padding: 0.65rem 1.1rem;
+  text-align: center;
+}
+
+.room-card__booking-link span {
+  color: #eefbf9;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.room-card__booking-link strong {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+
+.room-card__booking-link:hover,
+.room-card__booking-link:focus-visible {
+  border-color: #ad581f;
+  box-shadow: 0 2px 0 #874219;
+}
+
+
+/* Rooms page responsive adjustments. */
+@media (max-width: 52rem) {
+  .room-card {
+    grid-template-columns: minmax(10rem, 1fr) minmax(0, 2fr);
+  }
+
+  .room-card__booking-link {
+    grid-column: 2;
+    grid-row: auto;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 38rem) {
+  .room-card {
+    display: block;
+  }
+
+  .room-card > a:first-child {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .room-card h2 {
+    margin-bottom: 1rem;
+  }
+
+  .room-card__booking-link {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}

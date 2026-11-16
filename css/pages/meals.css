@@ -1,0 +1,69 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /meals.css                                                            *
+ * Purpose: Owns presentation rules unique to the static meals page; reusable  *
+ *          rules remain in shared.css.                                        *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* Meals */
+.meal-card {
+  padding: 1.875rem 0;
+}
+
+.meal-card__media {
+  position: relative;
+}
+
+.meal-card__media > a {
+  display: block;
+  position: relative;
+}
+
+.meal-card__media img {
+  width: 100%;
+}
+
+.meal-card__cover {
+  inset: 0;
+  position: absolute;
+}
+
+.meal-card__media p {
+  background: url("../../images/bg-foodDetail.png") repeat;
+  bottom: 0;
+  color: var(--color-heading);
+  display: none;
+  left: 0;
+  padding: 0.4rem 1.25rem;
+  position: absolute;
+  right: 0;
+}
+
+.meal-card__media p span {
+  display: block;
+  font: 1.375rem/1 var(--font-serif);
+}
+
+.meal-card__media:hover .meal-card__cover,
+.meal-card__media:focus-within .meal-card__cover {
+  background: url("../../images/bg-foodInfos.png") repeat;
+}
+
+.meal-card__media:hover p,
+.meal-card__media:focus-within p {
+  display: block;
+}
+
+/* On small screens, keep meal descriptions visible instead of overlaying them. */
+@media (max-width: 38rem) {
+  .meal-card__media p {
+    display: block;
+    position: static;
+  }
+}
