@@ -1,0 +1,24 @@
+<!--                                                                            
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /app.component.html                                                   *
+ * Purpose: Defines the shared administration navigation and router outlet     *
+ *          used by all admin features.                                        *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ *******************************************************************************
+-->                                                                             
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <div class="container-fluid">
+  <a class="navbar-brand" routerLink="/">{{ title }}</a>
+  <div class="navbar-nav">
+    <a class="nav-link" routerLink="/">Trips</a>
+    <a class="nav-link" routerLink="/add-trip">Add Trip</a>
+    <a class="nav-link" routerLink="/login">Login</a>
+  </div>
+  </div>
+</nav>
+<main class="container">
+  <router-outlet></router-outlet>
+</main>

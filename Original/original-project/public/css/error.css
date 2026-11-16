@@ -1,0 +1,82 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /error.css                                                            *
+ * Purpose: Gives the original Express error page a responsive branded layout. *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ *******************************************************************************
+*/                                                                              
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+#background { min-height: 100vh; }
+#page { width: min(100%, 960px); }
+#contents.error-page {
+  display: block;
+  max-width: 865px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(12px, 4vw, 44px);
+}
+#contents.error-page div.box,
+#contents.error-page div.box > div,
+#contents.error-page div.body {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+#contents.error-page div.box {
+  background: #fff;
+  border: 1px solid #d7c9b7;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px #5a453522;
+}
+#contents.error-page div.body {
+  min-height: 0;
+  padding: clamp(24px, 6vw, 56px);
+  text-align: center;
+}
+#contents.error-page .error-page__code {
+  color: #1d625a;
+  font: 700 clamp(4rem, 16vw, 8rem)/1 Arial, Helvetica, sans-serif;
+  margin: 0 0 16px;
+  padding: 0;
+}
+#contents.error-page h1 {
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  line-height: 1.25;
+}
+#contents.error-page p { font-size: 16px; line-height: 1.7; }
+.error-page__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding-top: 10px;
+}
+.error-page__links a {
+  background: #267c71;
+  border-radius: 4px;
+  color: #fff;
+  font: 700 15px/1.4 Arial, Helvetica, sans-serif;
+  min-height: 48px;
+  padding: 13px 20px;
+  text-decoration: none;
+}
+.error-page__links a:hover { background: #1d625a; }
+.error-page__links a:focus-visible { outline: 3px solid #d9782f; outline-offset: 3px; }
+#contents.error-page pre {
+  max-width: 100%;
+  overflow-x: auto;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 38rem) {
+  .error-page__links { flex-direction: column; }
+  .error-page__links a { display: block; }
+}

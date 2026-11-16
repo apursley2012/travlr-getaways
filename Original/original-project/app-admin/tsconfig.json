@@ -1,0 +1,35 @@
+/*
+ *******************************************************************************
+ * Travlr Getaways — /Original/original-project/app-admin/tsconfig.json        *
+ * Purpose: Defines strict TypeScript and Angular compiler settings shared by  *
+ *          the administration application.                                    *
+ * Author: Alysha Pursley                                                      *
+ * Copyright (c) 2026 Alysha Pursley.                                          *
+ * License: Proprietary; see LICENSE                                           *
+ *******************************************************************************
+ */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022"
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

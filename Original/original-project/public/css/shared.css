@@ -1,0 +1,442 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /shared.css                                                           *
+ * Purpose: Owns reusable customer-site base, typography, layout, navigation,  *
+ *          accessibility, and shared component styles.                        *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+body {
+  background: #ffb744 url(../images/bg-body.jpg) repeat left bottom;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+#background {
+  background: url(../images/bg-pattern.jpg) repeat-x center top;
+  min-height: 1318px;
+}
+
+#page {
+  width: min(100%, 960px);
+  margin: 0 auto;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Shared sprite-backed components */
+#navigation li,
+#navigation li a:hover,
+#navigation li.selected a {
+  background-image: url(../images/bg-menu.png);
+  background-repeat: repeat-x;
+}
+
+#contents div.box,
+#contents div.box > div,
+#contents div.body {
+  background-image: url(../images/content-box.png);
+  background-repeat: no-repeat;
+}
+
+/* Header and navigation */
+#header {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Logo */
+#logo {
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 49px;
+}
+
+/* Navigation */
+#navigation {
+  background: url(../images/bg-navigation.png) no-repeat;
+  clear: both;
+  height: 50px;
+  width: min(100%, 860px);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 1px;
+}
+
+#navigation ul {
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation li {
+  float: left;
+  background-position: 0 -118px;
+  background-repeat: no-repeat;
+  height: 49px;
+  width: 122px;
+  margin: 0;
+  padding-left: 1px;
+  text-align: center;
+}
+
+#navigation li:first-child {
+  background: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#navigation li a {
+  color: #fff;
+  display: block;
+  font: bold 14px/48px Arial, Helvetica, sans-serif;
+  height: 49px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#navigation li a:hover {
+  background-position: 0 -59px;
+  color: #6d6157;
+}
+
+#navigation li.selected a {
+  background-position: 0 0;
+  color: #e4e1bd;
+}
+
+/* Footer */
+#footer {
+  color: #594334;
+  font-size: 14px;
+  line-height: 48px;
+  margin: -38px 0 20px;
+  padding-top: 42px;
+  text-transform: uppercase;
+}
+
+#footer > div {
+  background-color: #ac9e94;
+  height: 48px;
+  width: min(100%, 862px);
+  box-sizing: border-box;
+  border-bottom: 1px solid #72675f;
+  border-top: 1px solid #cdbeb2;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: right;
+}
+
+#footer ul.navigation {
+  float: left;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer ul.navigation li {
+  float: left;
+  margin-right: 10px;
+}
+
+#footer ul.navigation li a {
+  color: #594334;
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+#footer ul.navigation li:first-child a {
+  border-left: 0;
+  padding-left: 0;
+}
+
+#footer ul.navigation li a:hover {
+  color: #eee7c3;
+}
+
+#footer ul.navigation li.active a {
+  color: #fff;
+}
+
+#footer p {
+  margin: 0;
+  text-align: center;
+  text-transform: none;
+}
+
+
+/* Shared content */
+#contents {
+  display: inline-block;
+  width: min(100%, 960px);
+  box-sizing: border-box;
+  padding: 0 47px;
+}
+
+#contents h1 {
+  color: #316e66;
+  font: 26px/30px "Times New Roman", Times, serif;
+  margin: 18px 0 20px;
+  padding-left: 2px;
+  text-transform: uppercase;
+}
+
+#contents div.body h1,
+#contents h2 {
+  color: #316e66;
+  font: 30px/30px "Times New Roman", Times, serif;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+#contents h2 {
+  font-size: 22px;
+  margin: 0 0 30px;
+}
+
+#contents h2 a {
+  color: #2c9688;
+  text-decoration: none;
+}
+
+#contents p {
+  color: #5a4535;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0 0 24px 2px;
+}
+
+#contents p a {
+  color: #5a4535;
+}
+
+#contents p a:hover,
+#news div.sidebar ul li a:hover {
+  color: #917157;
+}
+
+/* Shared box shadow */
+#contents div.box {
+  background-position: left bottom;
+  margin-bottom: 20px;
+  margin-left: 1px;
+  padding: 0 0 6px;
+}
+
+#contents div.box > div {
+  background-position: -1745px top;
+  padding: 6px 0 0;
+}
+
+#contents div.body {
+  background-position: -871px top;
+  background-repeat: repeat-y;
+  min-height: 980px;
+  padding: 30px 40px 0;
+}
+
+/* Shared rooms, meals, and dive-site list structure */
+#rooms,
+#foods,
+#sites {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#rooms li,
+#foods li,
+#sites li {
+  display: inline-block;
+  width: min(100%, 784px);
+  box-sizing: border-box;
+  border-top: 1px solid #b7b7b7;
+  padding: 30px 0;
+  position: relative;
+}
+
+#rooms li:first-child,
+#foods li:first-child,
+#sites li:first-child {
+  border-top: 0;
+}
+
+/* Keyboard focus remains visible without changing pointer interaction styles. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+
+/* Responsive adaptation of the original server-rendered customer layout. */
+@media (max-width: 959px) {
+  #page {
+    width: 100%;
+    max-width: 960px;
+  }
+
+  #header {
+    padding-inline: 1rem;
+  }
+
+  #logo {
+    float: none;
+    margin: 0 auto 1rem;
+    text-align: center;
+  }
+
+  #logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #navigation {
+    background: #316e66;
+    border-radius: 4px;
+    height: auto;
+    max-width: 860px;
+    width: 100%;
+    padding: 0;
+  }
+
+  #navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    padding: 0.25rem;
+  }
+
+  #navigation li,
+  #navigation li:first-child {
+    background: none;
+    float: none;
+    flex: 1 1 110px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+
+  #navigation li a {
+    height: auto;
+    line-height: 1.4;
+    min-height: 44px;
+    padding: 0.75rem 0.5rem;
+  }
+
+  #contents {
+    display: block;
+    max-width: 865px;
+    width: 100%;
+    padding: 0 clamp(0.75rem, 4vw, 2rem);
+  }
+
+  #contents div.box,
+  #contents div.box > div,
+  #contents div.body {
+    background: none;
+  }
+
+  #contents div.box {
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  #contents div.body {
+    min-height: 0;
+    padding: clamp(1rem, 4vw, 2.5rem);
+  }
+
+  #rooms,
+  #foods,
+  #sites,
+  #news,
+  #news > div {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #rooms li,
+  #foods li,
+  #sites li {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #footer {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  #footer > div {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  #footer ul.navigation {
+    display: flex;
+    float: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 600px) {
+  #navigation li,
+  #navigation li:first-child {
+    flex-basis: 32%;
+  }
+
+  #news > div {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  #news div.sidebar {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #rooms li img,
+  #foods li img,
+  #sites li img {
+    float: none;
+    margin: 0 0 1rem;
+  }
+
+  #rooms .rate {
+    position: static;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  #contents div.body h1,
+  #contents h2 {
+    font-size: clamp(1.5rem, 6vw, 1.875rem);
+    line-height: 1.25;
+  }
+}

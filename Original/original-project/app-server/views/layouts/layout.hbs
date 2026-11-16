@@ -1,0 +1,34 @@
+{{!--                                                                           
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /layout.hbs                                                           *
+ * Purpose: Defines the shared Handlebars document shell and stylesheet        *
+ *          loading order for customer pages.                                  *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+--}}                                                                            
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alysha Pursley">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    {{!-- Shared styles load first; pageStyle is included only when a page owns unique rules. --}}
+    <link rel="stylesheet" href="/css/shared.css">
+    {{#if pageStyle}}
+      <link rel="stylesheet" href="/css/{{pageStyle}}.css">
+    {{/if}}
+  </head>
+  <body>
+    <div id="background">
+      <div id="page">
+        {{{body}}}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!--                                                                            
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /trip-card.component.html                                             *
+ * Purpose: Defines Angular presentation markup for the reusable trip display  *
+ *          feature.                                                           *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ *******************************************************************************
+-->                                                                             
+<div class="card">
+  <div class="card-header">{{ trip.name }}</div>
+  <img src="assets/images/{{ trip.image }}" [alt]="trip.name" class="card-img-top" />
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-muted">
+      {{ trip.resort }}
+    </h6>
+    <p class="card-subtitle mt-3 mb-3 text-muted">
+      {{ trip.length }} only {{ trip.perPerson | currency: 'USD': 'symbol' }} per person
+    </p>
+    <!-- Trip descriptions are stored as formatted content and rendered through Angular sanitization. -->
+    <p class="card-text" [innerHTML]="trip.description"></p>
+    <div>
+      <button type="button" (click)="editTrip(trip)" class="btn btn-info">Edit Trip</button>
+    </div>
+  </div>
+</div>

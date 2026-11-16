@@ -1,0 +1,29 @@
+{{!--                                                                           
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /error.hbs                                                            *
+ * Purpose: Renders branded, responsive server errors within the original      *
+ *          customer layout.                                                   *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+--}}                                                                            
+
+<main id="contents" class="error-page">
+  <div class="box">
+    <div>
+      <div class="body">
+        <p class="error-page__code" aria-hidden="true">{{errorStatus}}</p>
+        <h1>{{message}}</h1>
+        <p>The page or resource you requested could not be displayed. You can continue exploring Travlr Getaways below.</p>
+        <nav class="error-page__links" aria-label="Continue browsing">
+          <a href="/">Return to Home</a>
+          <a href="/travel">Explore Travel</a>
+        </nav>
+        {{#if error.stack}}<pre>{{error.stack}}</pre>{{/if}}
+      </div>
+    </div>
+  </div>
+</main>

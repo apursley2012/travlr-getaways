@@ -1,0 +1,23 @@
+/*
+ *******************************************************************************
+ * Travlr Getaways — /Original/original-project/app-admin/tsconfig.spec.json   *
+ * Purpose: Defines TypeScript compilation settings for administration test    *
+ *          source when tests are present.                                     *
+ * Author: Alysha Pursley                                                      *
+ * Copyright (c) 2026 Alysha Pursley.                                          *
+ * License: Proprietary; see LICENSE                                           *
+ *******************************************************************************
+ */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "jasmine"
+    ]
+  },
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ]
+}

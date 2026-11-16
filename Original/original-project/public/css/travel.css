@@ -1,0 +1,23 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /travel.css                                                           *
+ * Purpose: Owns presentation rules unique to the server-rendered travel       *
+ *          customer page; shared rules remain in shared.css.                  *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ * Third-party: FreeWebsiteTemplates.com; rights retained.                     *
+ *******************************************************************************
+*/                                                                              
+
+/* Dive Site */
+#sites li {
+  padding-bottom: 0;
+}
+
+#sites li img {
+  float: right;
+  border: 1px solid #2c9688;
+  margin-left: 15px;
+}

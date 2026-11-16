@@ -1,0 +1,15 @@
+/*                                                                              
+ *******************************************************************************
+ * Travlr Getaways                                                             *
+ * File: /styles.css                                                           *
+ * Purpose: Provides administration-wide base styles that apply across Angular *
+ *          feature components.                                                *
+ * Author: Alysha Pursley                                                      *
+ * Copyright: (c) 2026 Alysha Pursley.                                         *
+ * License: Proprietary; see LICENSE                                           *
+ *******************************************************************************
+*/                                                                              
+
+body {
+  margin: 0;
+}
